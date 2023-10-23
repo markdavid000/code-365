@@ -1,4 +1,4 @@
-/* Styling the body */
+dis/* Styling the body */
 body {
   margin: 0;
   padding: 0;
@@ -7,19 +7,16 @@ body {
   image and dimensions */
 section {
   width: 100%;
-  height: 100vh;
-  background:
-    url(
-'https://media.geeksforgeeks.org/wp-content/uploads/20210408155049/gfg9.png'
-    );
+  background: url("https://media.geeksforgeeks.org/wp-content/uploads/20210408155049/gfg9.png");
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 /* Styling the left floating section */
 section .leftBox {
-  width: 50%;
+  width: 100%;
   height: 100%;
-  float: left;
-  padding: 50px;
+  padding: 30px;
   box-sizing: border-box;
 }
 /* Styling the background of 
@@ -27,8 +24,8 @@ section .leftBox {
 section .leftBox .content {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  transition: .5s;
+  padding: 20px;
+  transition: 0.5s;
 }
 /* Styling the hover effect 
   of left floating section */
@@ -52,18 +49,14 @@ section .leftBox .content p {
 /* Styling the three events section */
 section .events {
   position: relative;
-  width: 50%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  float: right;
   box-sizing: border-box;
 }
 /* Styling the links of 
 the events section */
 section .events ul {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   margin: 0;
   padding: 40px;
   box-sizing: border-box;
@@ -73,8 +66,8 @@ section .events ul li {
   list-style: none;
   background: #fff;
   box-sizing: border-box;
-  height: 200px;
   margin: 15px 0;
+  display: flex;
 }
 /* Styling the time class of events section */
 section .events ul li .time {
@@ -82,11 +75,11 @@ section .events ul li .time {
   padding: 20px;
   background: #262626;
   box-sizing: border-box;
-  width: 30%;
-  height: 100%;
-  float: left;
+  width: 100%;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
 }
 /* Styling the hover effect
   of events section */
@@ -96,12 +89,8 @@ section .events ul li:hover .time {
 /* Styling the header of time 
   class of events section */
 section .events ul li .time h2 {
-  position: absolute;
   margin: 0;
   padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 60px;
   line-height: 30px;
@@ -118,14 +107,11 @@ section .events ul li .details {
   padding: 20px;
   background: #fff;
   box-sizing: border-box;
-  width: 70%;
   height: 100%;
-  float: left;
 }
 /* Styling the header of the 
 details class of events section */
 section .events ul li .details h3 {
-  position: relative;
   margin: 0;
   padding: 0;
   font-size: 22px;
@@ -133,7 +119,6 @@ section .events ul li .details h3 {
 /* Styling the lists of details 
 class of events section */
 section .events ul li .details p {
-  position: relative;
   margin: 10px 0 0;
   padding: 0;
   font-size: 16px;
@@ -147,11 +132,23 @@ section .events ul li .details a {
   border: 1.5px solid #262626;
   margin-top: 8px;
   font-size: 18px;
-  transition: .5s;
+  transition: 0.5s;
 }
 /* Styling the details class's hover effect */
 section .events ul li .details a:hover {
   background: #e91e63;
   color: #fff;
   border-color: #e91e63;
+}
+
+@media (max-width: 910px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  section .events ul li {
+    flex-direction: column;
+  }
 }
